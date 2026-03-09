@@ -1,0 +1,34 @@
+From 8077031a06d3e69a3af9ff33d332b621a27b73ee Mon Sep 17 00:00:00 2001
+From: Siratul Islam <email@sirat.me>
+Date: Tue, 3 Mar 2026 14:05:28 +0600
+Subject: [PATCH 3/3] MAINTAINERS: add entry for ST VL53L1X ToF sensor driver
+
+Add maintainer entry for the STMicroelectronics VL53L1X
+Time-of-Flight ranging sensor IIO driver.
+
+Signed-off-by: Siratul Islam <email@sirat.me>
+---
+ MAINTAINERS | 7 +++++++
+ 1 file changed, 7 insertions(+)
+
+diff --git a/MAINTAINERS b/MAINTAINERS
+index 61bf550fd37c..cb8ee607fda1 100644
+--- a/MAINTAINERS
++++ b/MAINTAINERS
+@@ -25093,6 +25093,13 @@ S:	Maintained
+ F:	Documentation/devicetree/bindings/iio/proximity/st,vl53l0x.yaml
+ F:	drivers/iio/proximity/vl53l0x-i2c.c
+ 
++ST VL53L1X ToF RANGER(I2C) IIO DRIVER
++M:	Siratul Islam <email@sirat.me>
++L:	linux-iio@vger.kernel.org
++S:	Maintained
++F:	Documentation/devicetree/bindings/iio/proximity/st,vl53l1x.yaml
++F:	drivers/iio/proximity/vl53l1x-i2c.c
++
+ STABLE BRANCH
+ M:	Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+ M:	Sasha Levin <sashal@kernel.org>
+-- 
+2.53.0
+
