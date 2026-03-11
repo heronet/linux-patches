@@ -1,0 +1,58 @@
+From 9f8fa43494f0de3537bf180db7de914007533986 Mon Sep 17 00:00:00 2001
+From: Siratul Islam <email@sirat.me>
+Date: Tue, 10 Mar 2026 00:57:35 +0600
+Subject: [PATCH v3 1/2] dt-bindings: iio: proximity: add ST VL53L1X ToF sensor
+
+Add device tree binding documentation for the STMicroelectronics
+VL53L1X Time-of-Flight ranging sensor connected via I2C.
+
+Signed-off-by: Siratul Islam <email@sirat.me>
+---
+ .../devicetree/bindings/iio/proximity/st,vl53l0x.yaml      | 7 +++++--
+ MAINTAINERS                                                | 6 ++++++
+ 2 files changed, 11 insertions(+), 2 deletions(-)
+
+diff --git a/Documentation/devicetree/bindings/iio/proximity/st,vl53l0x.yaml b/Documentation/devicetree/bindings/iio/proximity/st,vl53l0x.yaml
+index 322befc41de6..0852259754f5 100644
+--- a/Documentation/devicetree/bindings/iio/proximity/st,vl53l0x.yaml
++++ b/Documentation/devicetree/bindings/iio/proximity/st,vl53l0x.yaml
+@@ -4,14 +4,17 @@
+ $id: http://devicetree.org/schemas/iio/proximity/st,vl53l0x.yaml#
+ $schema: http://devicetree.org/meta-schemas/core.yaml#
+ 
+-title: ST VL53L0X ToF ranging sensor
++title: ST VL53L0X/VL53L1X ToF ranging sensor
+ 
+ maintainers:
+   - Song Qiang <songqiang1304521@gmail.com>
++  - Siratul Islam <email@sirat.me>
+ 
+ properties:
+   compatible:
+-    const: st,vl53l0x
++    enum:
++      - st,vl53l0x
++      - st,vl53l1x
+ 
+   reg:
+     maxItems: 1
+diff --git a/MAINTAINERS b/MAINTAINERS
+index 61bf550fd37c..a142a97be4cb 100644
+--- a/MAINTAINERS
++++ b/MAINTAINERS
+@@ -25093,6 +25093,12 @@ S:	Maintained
+ F:	Documentation/devicetree/bindings/iio/proximity/st,vl53l0x.yaml
+ F:	drivers/iio/proximity/vl53l0x-i2c.c
+ 
++ST VL53L1X ToF RANGER(I2C) IIO DRIVER
++M:	Siratul Islam <email@sirat.me>
++L:	linux-iio@vger.kernel.org
++S:	Maintained
++F:	Documentation/devicetree/bindings/iio/proximity/st,vl53l0x.yaml
++
+ STABLE BRANCH
+ M:	Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+ M:	Sasha Levin <sashal@kernel.org>
+-- 
+2.53.0
+
